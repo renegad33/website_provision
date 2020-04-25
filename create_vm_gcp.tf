@@ -15,7 +15,7 @@ resource "google_compute_instance" "default" {
  name         = "website-${random_id.instance_id.hex}"
  machine_type = "f1-micro"
  zone         = "us-central1-a"
- tags = ["HTTP", "HTTPS"]
+ tags = ["http-server", "https-server"]
  boot_disk {
    initialize_params {
      image = "ubuntu-os-cloud/ubuntu-2004-lts"
